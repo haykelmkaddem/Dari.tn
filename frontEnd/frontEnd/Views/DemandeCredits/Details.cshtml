@@ -1,0 +1,65 @@
+﻿@model Model.GestionCredit.DemandeCredit
+
+@{ ViewBag.Title = "Details"; }
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>DemandeCredit</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.salaire)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.salaire)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.montantDemande)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.montantDemande)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.duree)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.duree)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.age)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.age)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.profesion)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.profesion)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.id })       |
+        @Html.ActionLink("Banques reliées", "IndexByDemands","Banks",new{idDemande=Model.id},null);      |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

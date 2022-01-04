@@ -1,0 +1,79 @@
+﻿@model Model.GestionCredit.Bank
+
+@{ ViewBag.Title = "Details"; }
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Bank</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                Image
+            </dt>
+            <dd  class="widget-title">
+                    <img src="/Content/images"+  @Html.DisplayFor(model => model.NomBank) +".png" alt="">
+            </dd>       
+            <dt>
+                @Html.DisplayNameFor(model => model.CreditPotentielle)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CreditPotentielle)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.marge)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.marge)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.offre)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.offre)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.teaux)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.teaux)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.approuvation)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.approuvation)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.NomBank)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.NomBank)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+        @Html.ActionLink("IndexB", "IndexByDemands", new { idDemande = Model.id })
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

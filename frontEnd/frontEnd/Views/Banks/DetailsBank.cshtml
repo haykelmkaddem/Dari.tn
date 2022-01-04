@@ -1,0 +1,79 @@
+﻿@model Model.GestionCredit.Bank
+
+@{ ViewBag.Title = "DetailsBank"; }
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DetailsBank</title>
+</head>
+<body>
+    <div>
+        <h4>Bank</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.CreditPotentielle)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CreditPotentielle)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.marge)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.marge)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.offre)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.offre)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.teaux)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.teaux)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.approuvation)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.approuvation)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.NomBank)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.NomBank)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.demandecredit)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.demandecredit)
+            </dd>
+        </dl>
+    </div>
+    <p>
+
+        @Html.ActionLink("Back to List", "IndexByDemands",new { idDemande = Model.demandecredit.id })
+        @Html.ActionLink("Approuver la Banque", "ApprouverBank",new { id = Model.id })
+    </p>
+</body>
+</html>

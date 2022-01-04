@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Model.GestionCredit.DemandeCredit>
+
+@{ ViewBag.Title = "Index"; }
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.salaire)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.montantDemande)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.duree)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.profesion)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.salaire)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.montantDemande)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.duree)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.age)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.profesion)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                    @Html.ActionLink("Banks","Banks/IndexByDemands",new { id= item.id })
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>
